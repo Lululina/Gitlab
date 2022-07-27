@@ -1,0 +1,219 @@
+{
+    "type": "object",
+    "properties": {
+        "object_kind": {
+            "type": "string"
+        },
+        "object_attributes": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "ref": {
+                    "type": "string"
+                },
+                "tag": {
+                    "type": "boolean"
+                },
+                "sha": {
+                    "type": "string"
+                },
+                "before_sha": {
+                    "type": "string"
+                },
+                "source": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "detailed_status": {
+                    "type": "string"
+                },
+                "stages": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "created_at": {
+                    "type": "string"
+                },
+                "finished_at": {
+                    "type": "string"
+                },
+                "duration": {},
+                "queued_duration": {},
+                "variables": {
+                    "type": "array"
+                }
+            }
+        },
+        "merge_request": {},
+        "user": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "username": {
+                    "type": "string"
+                },
+                "avatar_url": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                }
+            }
+        },
+        "project": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "web_url": {
+                    "type": "string"
+                },
+                "avatar_url": {},
+                "git_ssh_url": {
+                    "type": "string"
+                },
+                "git_http_url": {
+                    "type": "string"
+                },
+                "namespace": {
+                    "type": "string"
+                },
+                "visibility_level": {
+                    "type": "integer"
+                },
+                "path_with_namespace": {
+                    "type": "string"
+                },
+                "default_branch": {
+                    "type": "string"
+                },
+                "ci_config_path": {
+                    "type": "string"
+                }
+            }
+        },
+        "commit": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "message": {
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "timestamp": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string"
+                },
+                "author": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "email": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "builds": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "stage": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "type": "string"
+                    },
+                    "started_at": {},
+                    "finished_at": {},
+                    "duration": {},
+                    "queued_duration": {},
+                    "failure_reason": {},
+                    "when": {
+                        "type": "string"
+                    },
+                    "manual": {
+                        "type": "boolean"
+                    },
+                    "allow_failure": {
+                        "type": "boolean"
+                    },
+                    "user": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "username": {
+                                "type": "string"
+                            },
+                            "avatar_url": {
+                                "type": "string"
+                            },
+                            "email": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "runner": {},
+                    "artifacts_file": {
+                        "type": "object",
+                        "properties": {
+                            "filename": {},
+                            "size": {}
+                        }
+                    },
+                    "environment": {}
+                },
+                "required": [
+                    "id",
+                    "name",
+                    "status",
+                    "created_at",
+                    "started_at",
+                    "finished_at"
+                ]
+            }
+        }
+    }
+}
